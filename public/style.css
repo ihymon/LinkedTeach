@@ -5,7 +5,7 @@ box-sizing: border-box;}
 
 .wrap {width: 100%;
 height: 100vh;
-background-color: #247CC0;
+background-color: #ffffff;
 display: flex;
 flex-direction: column;
 align-items: center;
@@ -53,3 +53,34 @@ text-transform:uppercase;
 
 }
  
+
+.pColor{color: #C72535;
+font-size: 20px;}
+
+.h1Color{color: #247CC0;
+    font-size: 50px;}
+
+
+    .HomeContainer{display: flex;}
+
+
+    .HomeText{margin: 50 0px;
+    margin: 100px 10px;}
+
+    .HomeText h2 {
+        font-size: 50px;
+    }
+
+    .HomeText p {margin-top:20px ;}
+.ShopBut  {background-color: #247CC0;
+border: none;
+color: #ffffff;
+width: 100px;
+height: 40px;
+cursor: pointer;
+margin-top:20px ;
+
+}
+
+img {width: 400px;
+height: 400px;}
