@@ -4,7 +4,7 @@ box-sizing: border-box;}
 
 
 .wrap {width: 100%;
-height: 100vh;
+height: 200vh;
 background-color: #ffffff;
 display: flex;
 flex-direction: column;
@@ -44,7 +44,7 @@ justify-content: space-around;
 }
  
 .ContainerSelect select{border: none;
-margin: 0 10px;
+margin: 50px 10px;
 text-transform:uppercase;
 }
 
@@ -52,26 +52,52 @@ text-transform:uppercase;
     margin:0  10px;
 
 }
+
+
+
  
 
 .pColor{color: #C72535;
-font-size: 20px;}
+font-size: 20px;
+
+
+}
 
 .h1Color{color: #247CC0;
     font-size: 50px;}
 
 
-    .HomeContainer{display: flex;}
+    .HomeContainer{display: flex;
+    justify-content: start;
+align-items: center;
+margin: 0 100px;
+}
 
 
     .HomeText{margin: 50 0px;
-    margin: 100px 10px;}
+    margin: 100px 100px;
+    margin-left: -100px;
+    align-items: start;
+    position: relative;
+    /* left: -70px; */
+
+}
 
     .HomeText h2 {
-        font-size: 50px;
+        font-size: 55px;
     }
 
+
+.ContainerImg img{display: flex;
+align-items: center;
+justify-content: end;
+position: relative;
+left: 100px;
+
+}
+    
     .HomeText p {margin-top:20px ;}
+
 .ShopBut  {background-color: #247CC0;
 border: none;
 color: #ffffff;
@@ -82,5 +108,216 @@ margin-top:20px ;
 
 }
 
-img {width: 400px;
-height: 400px;}
+img {width: 500px;
+height: 500px;}
+
+.barsMenu{display: none;}
+
+
+.BanerContainer{
+    width: 75%;
+    height: 40vh;
+    background-color: #ffffff
+}
+
+.ContainerItem  img {width: 150px;
+height: 120px;
+margin: 50px;
+flex-wrap: wrap;}
+
+
+
+
+
+
+
+.TovarContainer{width: 100%;
+height: 50vh;
+background-color: #ffffff;
+display: flex;
+justify-content: center;
+}
+
+
+.TovarItem{width: 600px;
+height: 300px;
+background-color:#ffffff;
+display: flex;
+margin: 10px;
+margin-left: 50px;}
+
+
+.TovarItem h2 {
+    margin: 10px;
+    margin-top: 50px;
+    font-size: 30px;
+    left: -10px;
+    position: relative;
+}
+
+
+.TovarItem p {
+    
+    font-size: 18px;
+    
+    position: relative;
+
+}
+
+
+
+.TovarItem img{width: 280px;
+height: 270px;}
+
+
+.TextTovar{margin: 10px 40px;}
+
+
+
+.priceTovar{margin-top: 20px;
+font-size: 22px;}
+
+.starTovar{font-size: 20px;
+}
+
+
+
+.ActionContainer{display: flex;
+    width: 100%;
+    height: 1000px;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 100px;
+}
+
+
+.ActionItem{width: 600px;
+    margin-left: 50px;
+    position: relative;
+    left: -10px;
+height: 270px;
+background: rgb(217,67,201);
+background: linear-gradient(90deg, rgba(217,67,201,1) 0%, rgba(0,139,240,1) 88%);
+}
+
+
+.ActionImg{width: 300px;
+height: 300px;
+margin-left: 300px;
+position:  relative;
+left: 55px;
+top: 20px;}
+
+
+
+  .ActionText  {color: #F4F9FC;
+position: relative;
+top: -30px;
+margin: 10px ;
+font-size: 23px;
+margin-left: 40px;
+margin-top: -140px;}
+
+
+
+.ActionText p{text-transform:uppercase;
+font-size: 17px;}
+
+
+
+.ActionText h2{
+    font-size: 35px;}
+    
+
+.ActionText button {
+    border: none;
+    color: #F4F9FC;
+    font-size: 20px;
+    text-transform:uppercase;
+    background: rgb(217,67,201);
+background: linear-gradient(90deg, rgba(217,67,201,1) 0%, rgba(153,88,213,1) 71%);
+}
+
+
+@media (max-width: 1200px) {
+    
+    html {
+        font-size: 55%;
+    }
+    
+}
+
+
+@media (max-width: 991px) {
+
+
+    .logoGroup{
+        display: flex;
+        align-items: center;
+        font-size: 20px
+    
+    }
+    
+    .Logo{
+        margin-left:  10px;
+        color: #247CC0;
+    }
+    
+    header {
+        padding: 2rem 3% ;
+        
+    }
+    
+
+    header {
+        padding:   2rem  3%;
+    }
+  
+    .HomeText{font-size: 10px;
+   
+margin: -100px;
+margin-top: 20px;
+left: 0px;
+
+position: relative;}
+
+.fa-bars{display: flex;}
+
+.ContainerSelect{display: none;}
+
+.ContainerItem{display: flex;
+
+font-size: 18px}
+
+.HomeText h2{
+    font-size: 51px;
+
+}
+
+.barsMenu{display: flex;}
+.HomeText p{
+    font-size: 16px;
+
+}
+
+    .ContainerImg img{
+ 
+display: none
+}
+
+
+
+
+
+
+    
+      
+
+
+
+
+
+
+}
