@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+      <!-- JQuery connect -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js' integrity='sha512-+k1pnlgt4F1H8L7t3z95o3/KO+o78INEcXTbnoJQ/F2VqDVhWoaiVml/OEHv9HsVgxUaVW+IbiZPUJQfF/YxZw==' crossorigin='anonymous'></script>
+    
+    <!-- User fonts connect -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic" rel="stylesheet" />
+
+    <!-- Font Awesome connect -->
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.css' integrity='sha512-GmZYQ9SKTnOea030Tbiat0Y+jhnYLIpsGAe6QTnToi8hI2nNbVMETHeK4wm4MuYMQdrc38x+sX77+kVD01eNsQ==' crossorigin='anonymous'/>
+    <!-- CSS connect -->
+    <link rel="stylesheet" href="./style.css">
+
+    <!-- Axios -->
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <div class="wrap">
+
+        <div class="sidebar">
+            <div class="item">
+                <i class="fa-solid fa-list"></i>
+                <p>Товари</p>
+            </div>
+             <div class="item">
+                <i class="fa-solid fa-briefcase"></i>
+                <p>Замовлення</p>
+            </div>
+            <div class="item">
+                <i class="fa-solid fa-user"></i>
+                <p>Користувачі</p>
+            </div>
+              <div class="item">
+                <i class="fa-solid fa-gear"></i>
+                <p>Налаштування</p>
+            </div>
+
+        </div>
+
+        <div class="mainContainer">
+            <div class="goodsPage">
+                <div class="addContainer">
+                    <input type="text" id="title" placeholder="Назва">
+                    <input type="text" id="price" placeholder="Ціна">
+                    <button id="addGoods">Додати</button>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <script src="./main.js"></script>
+</body>
+</html>
