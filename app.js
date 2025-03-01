@@ -45,14 +45,14 @@ app.post('/products', (req, res) => {
     });
 });
 
+app.delete('/products/:id', async (req, res) => {
+        const deletedItem = await Item.findByIdAndDelete(req.params.id);
+        res.sendStatus(200);
+});
+
 app.get('/admin', (req, res) => {
     res.sendFile(path.join(__dirname,'admin', 'index.html'));
 })
-
-
-
-
-
 
 app.listen(PORT, () => {
     console.log(`Listening on port ${PORT}`);

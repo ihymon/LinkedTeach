@@ -1,7 +1,6 @@
 axios.get('http://localhost:3000/products')
 .then(res=>{
     console.log(res.data);
-    // $('.productContainer')
 
 
     res.data.map(item=>{
@@ -15,3 +14,5 @@ axios.get('http://localhost:3000/products')
         `)
     })
 })
+
+

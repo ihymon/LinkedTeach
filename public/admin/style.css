@@ -4,6 +4,22 @@
     box-sizing: border-box;
     font-family: Montserrat;
 }
+.popup{
+    width: 400px;
+    height: 150px;
+    background-color: #1137558f;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    color: #fff;
+    font-size: 24px;
+    border-radius: 10px;
+    display: none;  
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
 .wrap{
     width: 100%;
     height: 100vh;
@@ -44,4 +60,84 @@
 .mainContainer{
     width: 75%;
     height: 100vh;
+}
+.goodsPage{
+    padding: 50px;
+}
+.addContainer{
+    width: 100%;
+    display: flex;  
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+}
+.addContainer input{
+    width: 250px;
+    height: 50px;
+    border: none;
+    outline-color: #12456d;
+    box-shadow: 0 0 1px #247CC0;
+    border-radius: 20px;
+    padding: 0 10px;
+    margin: 0 10px;
+}
+
+.addContainer button{
+    width: 100px;
+    height: 50px;
+    border: none;
+    outline-color: #12456d;
+    box-shadow: 0 0 1px #247CC0;
+    border-radius: 20px;
+    padding: 0 10px;
+    margin: 0 10px;
+    background-color:#247CC0;
+    color: #fff;
+    cursor: pointer;
+}
+.addContainer button:hover{
+    background-color: #12456d;
+    transition: 0.1s ease-in-out;
+}
+.goodsContainer{
+    width: 100%;
+    height: 60vh;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #247CC0;
+    padding: 20px 0;
+    border-radius: 10px;
+}
+.productItem{
+    background-color: #eee;
+    width: 90%;
+    margin: 10px 0;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    border-radius: 20px;
+}
+.productItem h3{
+    width: 300px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.productItem p{
+    width: 300px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.productItem button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+.productItem button:first-child{
+    color: red;
+    margin-right: 5px;
 }
