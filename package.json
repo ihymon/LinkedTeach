@@ -19,8 +19,10 @@
   },
   "homepage": "https://github.com/ihymon/LinkedTeach#readme",
   "dependencies": {
+    "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "mongodb": "^6.13.0",
-    "mongoose": "^8.10.1"
+    "mongoose": "^8.10.1",
+    "node-telegram-bot-api": "^0.66.0"
   }
 }
