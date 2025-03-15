@@ -42,3 +42,39 @@ $('.goodsContainer').on('click', '.edit', function(){
         window.location.reload();
     })
 })
+
+$('#goodsBtn').click(()=>{
+    $('.page').css('display','none');
+    $('#goodsPage').css('display','flex');
+});
+
+$('#usersBtn').click(()=>{
+    $('.page').css('display','none');
+    $('#subscribersPage').css('display','flex');
+});
+
+
+axios.get('http://localhost:3000/subscribers')
+.then(res=>{ 
+    console.log(res.data);
+    res.data.map(item=>{
+        $('.subscribePageContainer').prepend(`
+            <h3 class = 'subscribeItem'> <div >${item.email}   </div>   <i id = '${item._id}'  class="fa-solid fa-trash deleteUser " ></i></h3>
+            
+     
+       
+       
+            `)
+        })
+    })
+    
+
+
+    $('.subscribePageContainer').on('click', '.deleteUser', function(){
+        let id = $(this).attr('id')
+        alert(id);
+        axios.delete(`http://localhost:3000/subscribers/${id}`)
+        .then(()=>{
+            window.location.reload();
+        })
+    })

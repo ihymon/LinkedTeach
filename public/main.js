@@ -16,3 +16,14 @@ axios.get('http://localhost:3000/products')
 })
 
 
+
+$('#subscribe').click(function(){
+    let email = $('#email').val()
+    axios.post('http://localhost:3000/subscribe', {
+        email: email
+    })
+    .then(()=>{
+        alert('Ваш емейл збережено');
+    })
+})
+

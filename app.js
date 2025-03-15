@@ -60,7 +60,45 @@ app.get('/admin', (req, res) => {
 })
 
 
+const userModel =  mongoose.model('User', {
+    email:String
+});
 
+app.post('/subscribe', (req, res) => {
+    const email = req.body.email;
+    const user = new userModel({
+        email: email
+    })
+    user.save().then(() => {
+        console.log(user);
+        
+    })
+    res.sendStatus(200);
+});
+
+
+app.get('/subscribers' , (req, res) => {
+    userModel.find()
+    .then((users) => {
+        res.send(users);
+    });
+});
+
+
+
+
+app.post('/subscribe' , (req , res) => {
+    const email = req.body.email;
+    console.log(email)
+    res.sendStatus(200);
+})
+
+
+app.delete('/subscribers/:id', async (req, res) => {
+    console.log(req.params.id)
+    const deletedUser = await userModel.findByIdAndDelete(req.params.id);
+    res.sendStatus(200);
+});
 
 // TELEGRAM
 
@@ -71,7 +109,8 @@ bot.onText(/\/start/, (msg)=>{
         reply_markup:{
             inline_keyboard: [[
                 {text: '+ Додати товар', callback_data: 'add_product'}, 
-                {text: '- Видалити товар', callback_data: 'delete_product'}
+                {text: '- Видалити товар', callback_data: 'delete_product'},
+                {text: ' Підписники', callback_data: 'subscribe'}
             ]]
         }
     });
@@ -103,7 +142,20 @@ bot.on('callback_query', (query)=>{
         Item.findByIdAndDelete(productId)
         .then(()=>{
             bot.sendMessage(chatId, 'Товар успішно видалено');
+        }) 
+    }else if(query.data === 'subscribe'){
+        userModel.find()
+        .then((users)=>{
+            bot.sendMessage(chatId, 'Підписки на новини', {
+                reply_markup: {
+                    inline_keyboard: users.map(user=>[
+                        {text: ` ${user.email} `}
+                    ])
+                }
+            });
         })
+        
+
     }
 })
 
