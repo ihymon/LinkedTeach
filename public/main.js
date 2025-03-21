@@ -1,3 +1,149 @@
+
+let db = [
+    {
+        id: 1,
+        pic: './img/Product/BlackHeadphone.png',
+        price: `$249.99`,
+        title: 'Black Headphone',
+        rating: 4,
+        count: 0
+
+    },
+    {
+        id: 2,
+        pic: './img/Product/MackbookPro.png',
+        price: `$2049.99`,
+        title: 'Mackbook Pro',
+        rating: 5,
+        count: 0
+
+    },
+    {
+        id: 3,
+        pic: './img/Product/iOSKeyboard.png',
+        price: `$249.99`,
+        title: 'iOS Keyboard',
+        rating: 4,
+        count: 0
+
+    },
+    {
+        id: 4,
+        pic: './img/Product/WhiteMouse.png',
+        price: `$249.99`,
+        title: 'Apple Mouse',
+        rating: 5,
+        count: 0
+
+    },
+    {
+        id: 5,
+        pic: './img/Product/BlackiPhoneSpeaker.png',
+        price: `$249.99`,
+        title: 'Black iPhone Speaker',
+        rating: 5,
+        count: 0
+
+    },
+    {
+        id: 6,
+        pic: './img/Product/iPhoneSpeaker.png',
+        price: `$249.99`,
+        title: 'iPhoneSpeaker',
+        rating: 4,
+        count: 0
+
+    },
+
+];
+
+
+
+for (let el of db) {
+    $('.productContainer').append(`<div class='productItem'>
+    <img src='${el.pic}' alt='goods'>
+    <div class='productItem__bottom'>
+        <div class="productItemGroup">
+            <h3>${el.title}</h3>
+            <p>${el.rating}</p>
+        </div>
+        <div class="productItemGroup">
+            <h3>${el.price}$</h3>
+            <button class='add' id='${el.id}'>+</button>
+        </div>
+    </div>
+    </div>`);
+}
+
+
+let cart = [];
+$('.wrap').click((e) => {
+
+    let ID = e.target.id;
+
+    if (ID != '') {
+        for (let el of db) {
+            if (el.id == ID) {
+                if(cart.length > 0){
+                    for (let goods of cart){
+                        if(el.title == goods.title ){
+                            el.count++;
+                        }else{
+                            el.count = 1;
+                        }
+                    } 
+                   
+                }
+                cart.push(el);
+            }
+        }
+    }
+
+    // console.log(cart);
+    $('.counter').text(cart.length);
+})
+
+
+
+
+  $('.cartOpen').click(()  => {
+    if(cart.length > 0)
+        // alert()
+    $('.cartPopup').css('right' , 0);
+
+
+    for(let el of cart) {
+        console.log(el)
+        $('.cartPopupContainer').append(`<div class = " orderRow"> 
+                 
+        <img src='${el.pic}' alt="goods">
+        
+        <div class="orderInfo">
+        <h3>${el.title}</h3>
+        <p>${el.price}</p>
+        </div>
+    <button class = "del"  id  = 'del${el.id}'>delete</button> 
+       </div>`)
+    }
+  })
+
+
+
+  $('.closePopup').click(()  => {
+    if(cart.length > 0)
+        // alert()
+    $('.cartPopup').css('right' , -400);})
+
+
+
+
+    $('.edit').click(()  => {
+        if(cart.length > 0)
+            // alert()
+        $('.orderRow').css('display' , 'none');})
+    
+
+
 axios.get('http://localhost:3000/products')
 .then(res=>{
     console.log(res.data);

@@ -297,7 +297,7 @@ left: 45px;
 .CheckItem{margin-top: 25px;}
 .productPage{
     width: 100%;
-    min-height: 150vh;
+    min-height: 290vh;  /*150vh */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -334,17 +334,19 @@ left: 45px;
 }
 .productItem{
     width: 300px;
-    height: 200px;
+    height: 400px;
     border: 1px solid #aaa;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 20px;
+    background-color: #ffffff;
     margin: 20px;
 }
 .productText{
     width: 100%;
     text-align: left;
+    font-size: 10px;
 }
 
 
@@ -461,6 +463,244 @@ background-color: #030D15;
 color: #fff;
 left: -15px;
 position: relative;}
+
+
+
+
+.deleteALL{ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .bestSellerProduct {
+    width: 100%;
+    padding: 50px 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 100px;
+}
+
+.productContainer {
+    width: 70%;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+} */
+
+.productItem img {
+    width: 230px;
+    position: relative;
+    top: -20px;
+    z-index: 2;
+}
+
+/* .productItem img:hover {
+    width: 230px;
+    transition: 1s;
+} */
+
+
+/* .productItem {
+
+    background-color: #C1D0E4;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 5px #eee;
+   
+} */
+
+
+/* .productItem__bottom {
+    background-color: #fff;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+  border-radius:50px ;
+    position: relative;
+    top: -80px;
+    box-shadow: 0 2px 5px #eee;
+} */
+
+.productItemGroup h3 {font-size: 25px;}
+
+
+
+.productItemGroup:nth-child(2) {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    height: 100px;
+    align-items: center;
+}
+
+.productItemGroup button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    color: #fff;
+    font-size: 32px;
+    font-weight: 600;
+    background: rgb(228, 245, 42);
+    background: linear-gradient(90deg, rgb(208, 245, 42) 0%, rgba(0, 158, 253, 1) 100%);
+}
+
+
+
+
+
+.productItemGroup button:hover {
+
+    background: rgb(89, 42, 245);
+    background: linear-gradient(90deg, rgb(47, 56, 4) 0%, rgba(0, 158, 253, 1) 100%);
+}
+
+/* header{width: 100%;
+display: flex;
+justify-content: flex-end;
+align-items: center;
+height: 10vh;
+padding: 0 150px;
+background-color: #333;
+} */
+
+.counter{
+    background: rgb(42,245,152);
+background: linear-gradient(90deg, rgba(42,245,152,1) 0%, rgba(0,212,255,1) 100%);
+width: 20px;
+height: 20px;
+color: #333;
+border-radius: 50%;
+display: flex;
+justify-content: center;
+align-items: center;
+position: relative;
+left: -10px;
+}
+
+
+
+.cartPopup{width: 400px;
+height: 100vh;
+background-color: #e1dcdc;
+position: fixed;
+top: 0;
+right: -400px;
+z-index: 10;
+display: flex;
+flex-direction: column;
+color: #333;
+}
+
+
+
+.CartPopupHeader{width: 100%;
+height: 10vh;
+align-items: center;
+display: flex;
+padding: 0 20px;
+color: red;
+font-weight: 900;
+font-size: 30px;
+cursor: pointer;}
+
+.CartPopupHeader i {
+    transition: 1ms ;
+}
+
+.CartPopupHeader i:hover {
+    transition: 1s;
+    transform: rotate(180deg);
+}
+
+
+
+.orderRow img{width: 90px;
+    height: 90px;
+}
+
+.orderRow{display: flex;
+width: 90%;
+justify-content: space-between;
+align-items: center;
+background-color: #eee;
+position: relative;
+left: 5%;
+height: 100px;
+margin: 10px 0;
+padding: 5px 10px;
+border-radius: 10px;
+}
+
+.orderRow button {
+    background-color: red;
+    color: #fff;
+    border: none;
+    padding: 2px 4px;
+    border-radius: 10px;
+    width: 65px;
+    height: 25px;
+}
+
+.orderInfo{width: 20%;}
+
+.orderInfo h3 {
+    font-size: 20px;
+    display: flex;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media (max-width: 1200px) {
     
