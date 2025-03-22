@@ -144,6 +144,34 @@ $('.wrap').click((e) => {
     
 
 
+
+
+        $('.add').click(function(){
+            let title = $('#title').val()
+            let price = $('#price').val()
+           axios.post('http://localhost:3000/products', {
+               name: title,
+               price: price
+           })
+           .then(()=>{
+               $('#popupInfo').text('Товар додано у корзину');
+               $('.popup').css('display','flex');
+               setTimeout(()=>{
+                    $('.popup').css('display','none');
+                  
+               },2000)
+           })
+        })
+
+
+
+
+
+
+
+
+
+
 axios.get('http://localhost:3000/products')
 .then(res=>{
     console.log(res.data);

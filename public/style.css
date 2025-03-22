@@ -571,6 +571,9 @@ position: relative;}
     height: 40px;
     border-radius: 50%;
     border: none;
+    align-items: center;
+    justify-content: center;
+    display: flex;
     color: #fff;
     font-size: 32px;
     font-weight: 600;
@@ -686,6 +689,35 @@ border-radius: 10px;
 
 
 
+.popup{
+    width:250px;
+    height: 90px;
+    background-color: #0c7c1f8f;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    color: #fff;
+    font-size: 24px;
+    border-radius: 10px;
+    display: none;  
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 100;
+
+}
+
+
+.sidebar{
+    width: 25%;
+    background-color: #247CC0;
+    color: #fff;
+    display: flex;  
+    padding: 20px 10px;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
 
 
 
