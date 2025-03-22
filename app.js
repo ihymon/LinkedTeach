@@ -33,6 +33,29 @@ const Item = mongoose.model('Item', products);
  
 
 
+// const orders = new mongoose.Schema({
+//     name: String,
+//     phone: String,
+//     email: String,
+//     list: Array,
+// })
+
+// const order = mongoose.model('Order', orders);
+
+// app.post('/orders', (req, res) => {
+//     const [name, phone, email] = req.body;
+//     const order = new order({
+//         name,
+//         phone,
+//         email,
+        
+//     });
+//     order.save()
+//     .then((order) => {
+//         res.send(order);
+//     });
+// });
+
 app.get('/products', (req, res) => {
     Item.find()
     .then((items) => {

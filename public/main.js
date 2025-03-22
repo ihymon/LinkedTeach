@@ -201,3 +201,18 @@ $('#subscribe').click(function(){
     })
 })
 
+
+
+
+$('#makeOrder').click(()=>{
+    alert('click');
+    axios.post('http://localhost:3000/orders', {
+        name: $('#name').val(),
+        phone: $('#phone').val(),
+        address: $('#address').val(),
+        orderList: JSON.stringify(cart)
+    })
+    .then(()=>{
+        alert('Ваше замовлення прийнято');
+    })
+})
