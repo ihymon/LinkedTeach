@@ -53,10 +53,16 @@ margin: 50px 10px;
 text-transform:uppercase;
 }
 
+.cartIconContainer{
+    display: flex;
+}
+
 .ContainerItem i {
     margin:0  10px;
 
 }
+
+.ContainerItem{display: flex;}
 
 
 
@@ -611,7 +617,8 @@ display: flex;
 justify-content: center;
 align-items: center;
 position: relative;
-left: -10px;
+left: -13px;
+top: -15px;
 }
 
 
